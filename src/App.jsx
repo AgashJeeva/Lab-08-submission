@@ -8,7 +8,7 @@ import Testimonial from './components/Testimonial'
 
 function App() {
   return (
-    <div>
+    <div className="container">
       {/* Exercise 01 */}
       <Greeting />
 
@@ -18,23 +18,32 @@ function App() {
       {/* Exercise 03 */}
       <Banner />
 
-      <Card
-        image="https://picsum.photos/300/200"
-        title="Sample Card"
-        description="This is a simple card component displaying an image, title, and description."
-      />
-
-      <div>
-        <Button text="Primary" variant="primary" size="small" />
-        <Button text="Secondary" variant="secondary" size="medium" />
-        <Button text="Danger" variant="danger" size="large" />
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', margin: '20px 0' }}>
+        <Card
+          image="https://picsum.photos/400/250"
+          title="Premium Service"
+          description="Experience the best quality services with our expert team."
+        />
+        <Card
+          image="https://picsum.photos/400/251"
+          title="Innovative Solutions"
+          description="We provide cutting-edge technology for your business growth."
+        />
       </div>
 
-      <Testimonial
-        quote="This is an amazing product!"
-        name="Jane Doe"
-        image="https://i.pravatar.cc/60"
-      />
+      <div style={{ textAlign: 'center', margin: '30px 0' }}>
+        <Button text="Get Started" variant="primary" size="large" />
+        <Button text="Learn More" variant="secondary" size="medium" />
+        <Button text="Cancel" variant="danger" size="small" />
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Testimonial
+          quote="The service was absolutely phenomenal. Highly recommended!"
+          name="Alex Johnson"
+          image="https://i.pravatar.cc/150?u=alex"
+        />
+      </div>
 
       <Footer />
     </div>

@@ -1,20 +1,20 @@
 function Button({ text, variant = 'primary', size = 'medium' }) {
   const colors = {
-    primary: '#007bff',
-    secondary: '#6c757d',
-    danger: '#dc3545',
+    primary: '#6366f1',
+    secondary: '#10b981',
+    danger: '#ef4444',
   }
 
   const paddings = {
-    small: '5px 12px',
-    medium: '10px 20px',
-    large: '14px 30px',
+    small: '8px 16px',
+    medium: '12px 24px',
+    large: '16px 32px',
   }
 
   const fontSizes = {
-    small: '13px',
-    medium: '15px',
-    large: '18px',
+    small: '0.875rem',
+    medium: '1rem',
+    large: '1.125rem',
   }
 
   return (
@@ -25,10 +25,15 @@ function Button({ text, variant = 'primary', size = 'medium' }) {
         border: 'none',
         padding: paddings[size] || paddings.medium,
         fontSize: fontSizes[size] || fontSizes.medium,
-        borderRadius: '5px',
+        borderRadius: '8px',
         cursor: 'pointer',
-        margin: '6px',
+        margin: '8px',
+        fontWeight: '600',
+        transition: 'transform 0.2s, box-shadow 0.2s',
+        boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
       }}
+      onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)'}
+      onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}
     >
       {text}
     </button>
